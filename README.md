@@ -73,8 +73,8 @@ order by emp.id;
 This yearly [report](https://github.com/kmjenniferng/oracle-company-db-project/blob/main/employees_total_sales_with_client_details_yearly_report.xls) will show employee id, employee first name, employee last name, a branch that an employee belongs to, manager name of each employee, client name, total sales of each employee has.
 
 
-### 2.3 Create a yearly report to show sum of total sales of each employee
-To create a yearly report to show sum of total sales of each employee, run **create_yearly_report_sum_total_sales_employee.sql** file in SQL Developer.
+### 2.3 Create a yearly report to show sum of total sales for each employee
+To create a yearly report to show sum of total sales for each employee, run **create_yearly_report_sum_total_sales_employee.sql** file in SQL Developer.
 
 ```
 select emp.id as "EMPLOYEE_ID",
@@ -88,4 +88,4 @@ left join employee manager on (emp.supervisor_id = manager.id)
 left join (select employee_id, sum(total_sales) as total_sales
 from works_with group by employee_id) emp_total_sales on (emp.id = emp_total_sales.employee_id);
 ```
-This yearly [report](https://github.com/kmjenniferng/oracle-company-db-project/blob/main/employees_sum_of_total_sales_yearly_report.xls) will show employee id, employee first name, employee last name, a branch that an employee belongs to, manager name of each employee, sum of total sales of each employee has.
+This yearly [report](https://github.com/kmjenniferng/oracle-company-db-project/blob/main/employees_sum_of_total_sales_yearly_report.xls) will show employee id, employee first name, employee last name, a branch that an employee belongs to, manager name of each employee, sum of total sales for each employee has.
