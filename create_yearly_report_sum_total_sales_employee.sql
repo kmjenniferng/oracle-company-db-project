@@ -1,4 +1,4 @@
--- Create yearly report to show sum of the total sales of each employee
+-- Create yearly report to show sum of the total sales for each employee
 
 select emp.id as "EMPLOYEE_ID",
 emp.first_name, emp.last_name,
